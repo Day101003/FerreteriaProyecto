@@ -48,7 +48,9 @@
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> CR</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+						<li><a href="/loginUsuario"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+						<li><a href="/admin"><i class="fa fa-user-o"></i> Administrador</a></li>
+
 					</ul>
 				</div>
 			</div>
@@ -85,14 +87,7 @@
 							</div>
 						</div>
 						<!-- /SEARCH BAR -->
-						<div class="col-md-3 clearfix">
-							<div class="header-ctn">
-								<!-- Wishlist -->
-								<div>
-									<a href="/admin">
-										<span>Administrador</span>
-									</a>
-								</div>
+						
 						<!-- ACCOUNT -->
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
@@ -105,7 +100,8 @@
 									</a>
 								</div>
 								<!-- /Wishlist -->
-
+	
+								
 								<!-- Cart -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
