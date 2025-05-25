@@ -1,38 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\ImagenProductoController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\OrdenController;
+
 
 Route::get('/', function () {
     return view('index');
 });
 
 
-Route::get('/admin', function () {
-    return view('admin');
-});
+Route::resource('usuarios', UsuarioController::class);
 
-Route::get('/producto', function () {
-    return view('producto');
-});
+Route::resource('imagenes', ImagenProductoController::class);
 
-Route::get('/categorias', function () {
-    return view('categorias');
-});
+Route::resource('categorias', CategoriaController::class);
 
-Route::get('/imagenes', function () {
-    return view('imagenes');
-});
-
-Route::get('/usuarios', function () {
-    return view('usuarios');
-});
-
-Route::get('/loginUsuario', function () {
-    return view('loginUsuario');
-});
-
-Route::get('/registrar', function () {
-    return view('registrar');
-});
-
+Route::resource('ordenes', OrdenController::class);
 

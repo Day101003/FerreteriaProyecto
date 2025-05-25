@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DarkPan - Productos</title>
+    <title>DarkPan - Usuarios</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Ferreteria</h3>
                 </a>
                 <div class="navbar-nav w-100">
-                    <a href="/admin" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
-                    <a href="/producto" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
-                    <a href="/categorias" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
-                    <a href="/usuarios" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
-                    <a href="/imagenes" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
+                     <a href="/administrador/index" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
+                    <a href="/productos/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
+                    <a href="/categorias/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
+                    <a href="/usuarios/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
+                    <a href="/imagenes/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
                 </div>
             </nav>
         </div>
@@ -56,56 +56,51 @@
                     </div>
                 </div>
             </nav>
+            
             <!-- Navbar End -->
+@extends('layouts.app')
 
-            <!-- Table Start -->
-            <div class="container-fluid pt-4 px-4">
-                <h6 class="mb-4">Tabla de Productos</h6>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID Producto</th>
-                            <th>Código</th>
-                            <th>Estado</th>
-                            <th>Precio</th>
-                            <th>Descripción</th>
-                            <th>Nombre Producto</th>
-                            <th>Cantidad</th>
-                            <th>ID Imagen</th>
-                            <th>ID Categoría</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>PROD001</td>
-                            <td>Activo</td>
-                            <td>$10.00</td>
-                            <td>Descripción del producto 1</td>
-                            <td>Producto 1</td>
-                            <td>100</td>
-                            <td>IMG001</td>
-                            <td>CATEG001</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>PROD002</td>
-                            <td>Inactivo</td>
-                            <td>$15.00</td>
-                            <td>Descripción del producto 2</td>
-                            <td>Producto 2</td>
-                            <td>50</td>
-                            <td>IMG002</td>
-                            <td>CATEG002</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Table End -->
+@section('content')
+<div class="container-fluid pt-4 px-4">
+    <h6 class="mb-4">Tabla de Usuarios</h6>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID Usuario</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Fecha de Registro</th>
+                <th>Correo</th>
+                <th>Tipo de Usuario</th>
+                <th>Ruta Imagen Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($usuarios as $usuario)
+                <tr>
+                    <td>{{ $usuario->id }}</td>
+                    <td>{{ $usuario->nombre }}</td>
+                    <td>{{ $usuario->telefono }}</td>
+                    <td>{{ $usuario->fecha_registro }}</td>
+                    <td>{{ $usuario->correo }}</td>
+                    <td>{{ $usuario->tipo_usuario }}</td>
+                    <td><img src="{{ $usuario->ruta_imagen_usuario }}" alt="Usuario" style="width: 50px;"></td>
+                    <td>
+                        <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-warning">Editar</a>
+                        <form action="{{ route('usuarios.destroy', $usuario) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@endsection
 
-           
-        </div>
-        <!-- Content End -->
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

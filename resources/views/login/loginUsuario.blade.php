@@ -49,7 +49,7 @@
                     <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+                                <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Ferreteria</h3>
                             </a>
                             <h3>Iniciar Sesión</h3>
                         </div>
@@ -69,7 +69,7 @@
                             <a href="">Olvidé Contraseña</a>
                         </div>
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Iniciar Sesión</button>
-                        <p class="text-center mb-0">No tienes una cuenta? <a href="/registrar">Registrate</a></p>
+                        <p class="text-center mb-0">No tienes una cuenta? <a href="/registrar/registrar">Registrate</a></p>
                     </div>
                 </div>
             </div>

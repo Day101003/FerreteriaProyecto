@@ -48,8 +48,9 @@
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> CR</a></li>
-						<li><a href="/loginUsuario"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
-						<li><a href="/admin"><i class="fa fa-user-o"></i> Administrador</a></li>
+						<li><a href="/login/loginUsuario"><i class="fa fa-user-o"></i> Mi cuenta</a></li>
+						<li><a href="{{ route('usuarios.index') }}"><i class="fa fa-user-o"></i> Administrador</a></li>
+
 
 					</ul>
 				</div>

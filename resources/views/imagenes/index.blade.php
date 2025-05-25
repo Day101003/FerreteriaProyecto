@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DarkPan - Usuarios</title>
+    <title>DarkPan - Imágenes</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Ferreteria</h3>
                 </a>
                 <div class="navbar-nav w-100">
-                        <a href="/admin" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
-                    <a href="/producto" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
-                    <a href="/categorias" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
-                    <a href="/usuarios" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
-                    <a href="/imagenes" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
+                   <a href="/administrador/index" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
+                    <a href="/productos/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
+                    <a href="/categorias/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
+                    <a href="/usuarios/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
+                    <a href="/imagenes/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
                 </div>
             </nav>
         </div>
@@ -60,47 +60,23 @@
 
             <!-- Table Start -->
             <div class="container-fluid pt-4 px-4">
-                <h6 class="mb-4">Tabla de Usuarios</h6>
+                <h6 class="mb-4">Tabla de Imágenes de Productos</h6>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>ID Usuario</th>
-                            <th>Nombre</th>
-                            <th>Contraseña</th>
-                            <th>Teléfono</th>
-                            <th>Fecha de Registro</th>
-                            <th>Correo</th>
-                            <th>Tipo de Usuario</th>
-                            <th>Ruta Imagen Usuario</th>
+                            <th>ID Imagen</th>
+                            <th>Tipo</th>
+                            <th>Ruta Imagen</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Juan Pérez</td>
-                            <td>******</td>
-                            <td>123456789</td>
-                            <td>2023-01-01</td>
-                            <td>juan@example.com</td>
-                            <td>Admin</td>
-                            <td><img src="img/user1.jpg" alt="Usuario 1" style="width: 50px;"></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>María García</td>
-                            <td>******</td>
-                            <td>987654321</td>
-                            <td>2023-02-15</td>
-                            <td>maria@example.com</td>
-                            <td>Usuario</td>
-                            <td><img src="img/user2.jpg" alt="Usuario 2" style="width: 50px;"></td>
-                        </tr>
+                        <!-- Aquí van los datos de las imágenes -->
                     </tbody>
                 </table>
             </div>
             <!-- Table End -->
 
-         
+
         </div>
         <!-- Content End -->
 

@@ -54,7 +54,7 @@
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
-                        <h6 class="mb-0">Jhon Doe</h6>
+                        <h6 class="mb-0">Administrador</h6>
                         <span>Admin</span>
                     </div>
                 </div>
@@ -69,14 +69,11 @@
                         </div>
                     </div>
            
-                    <a href="/admin" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
-                    <a href="/producto" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
-                    <a href="/categorias" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
-                    <a href="/usuarios" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
-                    <a href="/imagenes" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
-                
-
-            
+                    <a href="{{route('usuarios.index')}}" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
+                    <a href="{{route('categorias.index')}}" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
+                    <a href="" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
+                    <a href="{{route('imagenes.index')}}" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
                     <div class="nav-item dropdown">
                      
                         <div class="dropdown-menu bg-transparent border-0">
@@ -195,43 +192,46 @@
             </div>
         </div>
 
-        <!-- Formulario de Usuarios -->
-        <div class="col-sm-12 col-xl-6">
-            <div class="bg-secondary rounded h-100 p-4">
-                <h6 class="mb-4">Formulario de Usuarios</h6>
-                <form>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="fecha_registro" class="form-label">Fecha de Registro</label>
-                        <input type="date" class="form-control" id="fecha_registro" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="correo" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="tipo_usuario" class="form-label">Tipo de Usuario</label>
-                        <input type="number" class="form-control" id="tipo_usuario" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ruta_imagen_usuario" class="form-label">Ruta de Imagen de Usuario</label>
-                        <input type="text" class="form-control" id="ruta_imagen_usuario" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar Usuario</button>
-                </form>
+ <!-- Formulario de Usuarios -->
+<div class="col-sm-12 col-xl-6">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Formulario de Usuarios</h6>
+        <form action="{{ route('usuarios.store') }}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombre" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" name="contrasena" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" name="telefono" required>
+            </div>
+            <div class="mb-3">
+                <label for="fecha_registro" class="form-label">Fecha de Registro</label>
+                <input type="date" class="form-control" name="fecha_registro" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" class="form-control" name="correo" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipo_usuario" class="form-label">Tipo de Usuario</label>
+                <input type="number" class="form-control" name="tipo_usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="ruta_imagen_usuario" class="form-label">Ruta de Imagen de Usuario</label>
+                <input type="text" class="form-control" name="ruta_imagen_usuario" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Usuario</button>
+        </form>
+    </div>
+</div>
+
+
 
         <!-- Formulario de Imágenes -->
         <div class="col-sm-12 col-xl-6">

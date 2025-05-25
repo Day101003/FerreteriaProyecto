@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DarkPan - Imágenes</title>
+    <title>DarkPan - Categorías</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,11 +25,11 @@
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Ferreteria</h3>
                 </a>
                 <div class="navbar-nav w-100">
-                  <a href="/admin" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
-                    <a href="/producto" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
-                    <a href="/categorias" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
-                    <a href="/usuarios" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
-                    <a href="/imagenes" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
+                    <a href="/administrador/index" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Formularios</a>
+                    <a href="/productos/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Productos</a>
+                    <a href="/categorias/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Categorias</a>
+                    <a href="/usuarios/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Usuarios</a>
+                    <a href="/imagenes/index" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Imagenes</a>
                 </div>
             </nav>
         </div>
@@ -60,23 +60,32 @@
 
             <!-- Table Start -->
             <div class="container-fluid pt-4 px-4">
-                <h6 class="mb-4">Tabla de Imágenes de Productos</h6>
+                <h6 class="mb-4">Tabla de Categorías</h6>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>ID Imagen</th>
-                            <th>Tipo</th>
-                            <th>Ruta Imagen</th>
+                            <th>ID Categoría</th>
+                            <th>Nombre Categoría</th>
+                            <th>Logo</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Aquí van los datos de las imágenes -->
+                        <tr>
+                            <td>1</td>
+                            <td>Categoría 1</td>
+                            <td><img src="img/logo1.png" alt="Logo 1" style="width: 50px;"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Categoría 2</td>
+                            <td><img src="img/logo2.png" alt="Logo 2" style="width: 50px;"></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
             <!-- Table End -->
 
-
+          
         </div>
         <!-- Content End -->
 
